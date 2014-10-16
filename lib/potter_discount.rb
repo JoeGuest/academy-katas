@@ -1,5 +1,9 @@
 class Harry_Potter_Discount
 
-  HARRY_POTTER_SERIES = {}
+  BOOKS = {}
+
+  def books_in_series
+    BOOKS
+  end
 
 end
