@@ -1,0 +1,1 @@
+Location for all academy kata related exercises
