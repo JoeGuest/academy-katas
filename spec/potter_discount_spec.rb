@@ -5,17 +5,17 @@ RSpec.describe "The Harry Potter discount should" do
   context "be set out to" do
     it "have a hash constant that can contain titles" do
       titles = HarryPotterDiscount.new
-      expect( titles.books_in_series ).to eq ( {} )
+      expect( titles.books_in_series.class ).to be Hash
     end
 
     it "have a hash constant understanding the discount to be applied" do
       discount = HarryPotterDiscount.new
-      expect( discount.discount_to_apply ).to eq ( {} )
+      expect( discount.discount_to_apply.class ).to be Hash
     end
 
     it "have an array that can be used to store books in basket" do
       basket = HarryPotterDiscount.new
-      expect( basket.current_basket ).to eq ( [] )
+      expect( basket.current_basket.class ).to be Array
     end
 
     it "handle arguments to enter the correct books into the basket" do
