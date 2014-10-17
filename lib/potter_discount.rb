@@ -18,12 +18,12 @@ class HarryPotterDiscount
     DISCOUNT
   end
 
-  def current_basket(*book_to_add)
+  def current_basket(*books_to_add)
     basket = []
-    BOOKS.each do |book_num, title|
-      if book_num = book_to_add
-        basket << title
-      end
+    books_to_add.each do |book_to_add|
+      if BOOKS.has_key?(book_to_add)
+        basket << BOOKS[book_to_add]
+      end  
     end
     basket
   end
