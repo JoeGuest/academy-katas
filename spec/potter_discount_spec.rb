@@ -25,12 +25,12 @@ RSpec.describe "The Harry Potter discount should" do
 
     it "have a price field that resolves to 2 decimal places" do
       price = HarryPotterDiscount.new
-      expect( price.basket_price(6.65) ).to eq 2 
+      expect( price.basket_price_check(6.13) ).to eq 2 
     end
   end
 
 
-  context "apply the correct price for different books for" do
+  context "apply the correct price of" do
     it "a single book at 8 euros" do
       single_book = HarryPotterDiscount.new(1)
       expect( single_book.basket_price ).to eq 8
