@@ -25,7 +25,7 @@ RSpec.describe "The Harry Potter discount should" do
 
     it "have a price field that resolves to 2 decimal places" do
       price = HarryPotterDiscount.new
-      expect( price.basket_price ).to be_a ( Fixnum )
+      expect( price.basket_price(6.65) ).to eq 2 
     end
   end
 

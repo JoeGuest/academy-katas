@@ -28,4 +28,13 @@ class HarryPotterDiscount
     basket
   end
 
+  def basket_price(total_price)
+    num = 0
+    while(total_price != total_price.to_i)
+        num += 1
+        total_price *= 10
+    end
+    num
+  end
+
 end
