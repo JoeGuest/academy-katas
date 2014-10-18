@@ -20,7 +20,7 @@ RSpec.describe "The Harry Potter discount should" do
 
     it "handle arguments to enter the correct books into the basket" do
       filled_basket = HarryPotterDiscount.new
-      expect( filled_basket.current_basket(1) ).to eq (["Book1"] )
+      expect( filled_basket.current_basket(1,2) ).to eq (["Book1","Book2"] )
     end
 
     it "have a price field that resolves to 2 decimal places" do
@@ -28,7 +28,6 @@ RSpec.describe "The Harry Potter discount should" do
       expect( price.basket_price_check(6.13) ).to eq 2 
     end
   end
-
 
   context "apply the correct price of" do
     it "a single book at 8 euros" do
