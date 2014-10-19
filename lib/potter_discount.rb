@@ -70,6 +70,12 @@ class HarryPotterDiscount
     5 => 25
   }
 
+  def initialize(*books_to_add)
+    @basket = []
+    @price = 0
+    @books = books_to_add
+  end
+
   def books_in_series
     BOOKS
   end
@@ -79,15 +85,17 @@ class HarryPotterDiscount
   end
 
   def current_basket(*add_to_basket)
-    basket = []
     add_to_basket.each do |book_to_add|
-      basket << BOOKS.values[book_to_add - 1].book_title
+      @basket << BOOKS.values[book_to_add - 1].book_title
     end
-    basket
+    @basket
   end
 
   def basket_price
-    
+    @books.each do |book_to_add|
+      @price += BOOKS.values[book_to_add - 1].book_price
+    end
+    @price
   end
 
   def basket_price_check(total_price)
